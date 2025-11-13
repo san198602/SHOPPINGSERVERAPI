@@ -1,0 +1,42 @@
+# Ignore all files with the .log extension
+*.log
+
+# Ignore a specific file named "debug.txt"
+debug.txt
+
+# Ignore the entire "temp/" directory
+temp/
+
+# Ignore all files within the "build/" directory and its subdirectories
+build/
+
+# Ignore files named "config.ini" in any directory
+config.ini
+
+# Ignore all files with the .tmp extension, but not "important.tmp"
+*.tmp
+!important.tmp
+
+# Ignore macOS-specific files
+.DS_Store
+
+# Ignore IDE-specific files (e.g., for Visual Studio Code)
+.vscode/
+
+# Ignore Node.js specific files and directories
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+
+# Ignore Python-specific files and directories
+__pycache__/
+*.pyc
+.env
+
+# Ignore Java-specific files and directories
+*.class
+target/
+.idea/
+
+# Comments start with a hash symbol (#)
+# Blank lines are ignored

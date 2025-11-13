@@ -1,0 +1,29 @@
+{
+  "name": "SHOPPINGSERVERAPI",
+  "version": "1.0.0",
+  "description": "This is project of ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/mongodb": "^4.0.6",
+    "@types/node": "^24.10.1",
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.3",
+    "mongoose-paginate-v2": "^1.9.1",
+    "multer": "^2.0.2",
+    "nodemon": "^3.1.11",
+    "winston": "^3.18.3",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
+}
