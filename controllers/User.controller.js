@@ -25,7 +25,7 @@ exports.getAllUsers = async (req, res) => {
 
         return res.json(users);
     } catch (err) {
-        return res.status(400).json({ message: err.message }); // Handle errors
+        return res.status(400).json({ message: err.message }); 
     }
 };
 

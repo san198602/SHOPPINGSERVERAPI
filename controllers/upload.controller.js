@@ -10,7 +10,7 @@ var createUpload = (req, res, next) => {
     console.log(fileName);
     var file = __dirname + "/" + req.file.name;
     console.log("File Path : " + req.file.path);
-    var filePath = req.file.path;
+   
 
     const filePaths = req.file.path;
     fs.readFile(filePaths, 'utf8', (err, data) => {
@@ -18,8 +18,10 @@ var createUpload = (req, res, next) => {
             console.error('Error reading file:', err);
             return res.status(500).send('Error reading file.');
         }
+      ////  console.log(data,file);
+        //saveCSV(data);
 
-        console.log(data);
+
 
 
 
@@ -28,25 +30,29 @@ var createUpload = (req, res, next) => {
 };
 
 
-var saveCSV = () => {
+var saveCSV = (data,file) => {
     let up = new upload({
         fileType: "String",
         originalFileName: "String",
         uploadedBy: "String",
         csvData: data,
+        data: data,
+
 
     })
-    up.save()
-        .then(response => {
-            res.json({
-                message: 'Upload successfully!'
+    try {
+        up.save()
+            .then(response => {
+              
+                 console.log("Upload successfully");
             })
-        })
-        .catch(error => {
-            res.json({
-                message: 'An error occured!'
+            .catch(error => {
+                console.log(error);
             })
-        })
+    } catch (error) {
+
+        console.log(error);
+    }
 }
 
 
